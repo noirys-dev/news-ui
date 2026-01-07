@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haber Detayı - News UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button onclick="history.back()" class="back-btn">← Geri</button>
+            <h1>News UI</h1>
+            <button id="dark-mode-toggle" class="toggle-btn"><i class="fas fa-sun"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="news-detail">
+                <h1 id="news-title">Haber Başlığı</h1>
+                <div class="news-meta">
+                    <time id="news-date">Tarih</time>
+                    <span id="news-author">Yazar: News UI Editörü</span>
+                </div>
+                <img id="news-image" src="https://picsum.photos/800/400?random=1" alt="Haber Görseli">
+                <div class="news-content" id="news-content">
+                    <p>Bu haberin detaylı içeriği burada yer alacak. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+                    <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 News UI. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="news-detail.js"></script>
+</body>
+</html>

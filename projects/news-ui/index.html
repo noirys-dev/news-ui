@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="brand">
+                <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+                <a href="index.html" class="logo">News UI</a>
+            </div>
+            <div class="search-wrap">
+                <input type="search" placeholder="Haber ara..." aria-label="Haber ara">
+            </div>
+            <div class="actions">
+                <nav class="top-nav">
+                    <a href="#">Ana Sayfa</a>
+                    <a href="#">Spor</a>
+                    <a href="#">Ekonomi</a>
+                    <a href="#">Teknoloji</a>
+                </nav>
+                <button id="dark-mode-toggle" class="toggle-btn"><i class="fas fa-sun"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="ticker">
+        <div class="ticker-content">
+            Flaş: Yapay Zeka yatırımları artıyor — Futbol: Milli takım finale yükseldi — Ekonomi: Kurlar stabil
+        </div>
+    </div>
+
+    <main class="layout-grid">
+        <aside class="left-sidebar">
+            <div class="sidebar-inner">
+                <h3>Keşfet</h3>
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="#"><i class="fas fa-fire"></i><span>Öne Çıkanlar</span><span class="badge">12</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-bolt"></i><span>Gündem</span><span class="badge">8</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-theater-masks"></i><span>Kültür</span><span class="badge">4</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-leaf"></i><span>Yaşam</span><span class="badge">6</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-video"></i><span>Video</span><span class="badge">3</span></a>
+                    </li>
+                </ul>
+
+                <h4>Takip Edilenler</h4>
+                <ul class="follow-list">
+                    <li>
+                        <div class="follow-item">
+                            <div class="follow-left"><i class="fas fa-microchip"></i><span>Teknoloji</span></div>
+                            <button class="chip follow-btn" data-topic="teknoloji">Takipten Çıkar</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="follow-item">
+                            <div class="follow-left"><i class="fas fa-futbol"></i><span>Spor</span></div>
+                            <button class="chip follow-btn" data-topic="spor">Takipten Çıkar</button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="follow-item">
+                            <div class="follow-left"><i class="fas fa-chart-line"></i><span>Ekonomi</span></div>
+                            <button class="chip follow-btn" data-topic="ekonomi">Takipten Çıkar</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main-feed">
+            <div class="container">
+                <section class="featured">
+                    <article class="featured-article">
+                        <img src="https://picsum.photos/1200/600?random=1" alt="Teknoloji Haberi">
+                        <h2>Yapay Zeka Devrimi: 2026'da Hayatımızı Nasıl Değiştirecek?</h2>
+                        <p>Yapay zeka teknolojileri, sağlık, eğitim ve iş dünyasında devrim yaratmaya hazırlanıyor.</p>
+                        <time datetime="2026-01-08">8 Ocak 2026</time>
+                        <a href="news-detail.html?id=1" class="read-more">Devamını Oku</a>
+                    </article>
+                </section>
+
+                <section class="news-grid">
+                    <article class="news-item">
+                        <img src="https://picsum.photos/600/360?random=2" alt="Spor Haberi">
+                        <div class="news-body">
+                            <h3>Futbol Şampiyonası Finali Heyecanı</h3>
+                            <p>Milli takım, zorlu maçta galibiyet alarak finale yükseldi.</p>
+                            <time datetime="2026-01-08">8 Ocak 2026</time>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://picsum.photos/600/360?random=3" alt="Ekonomi Haberi">
+                        <div class="news-body">
+                            <h3>Ekonomide Yeni Dönem: Dolar Kuru Düşüşe Geçti</h3>
+                            <p>Merkez Bankası'nın aldığı tedbirler sonrası döviz kurlarında istikrar sağlandı.</p>
+                            <time datetime="2026-01-08">8 Ocak 2026</time>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://picsum.photos/600/360?random=4" alt="Dünya Haberi">
+                        <div class="news-body">
+                            <h3>İklim Değişikliği Zirvesi Sonuçlandı</h3>
+                            <p>Dünya liderleri, karbon emisyonlarını azaltmak için yeni anlaşmalara imza attı.</p>
+                            <time datetime="2026-01-08">8 Ocak 2026</time>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://picsum.photos/600/360?random=5" alt="Teknoloji Haberi">
+                        <div class="news-body">
+                            <h3>Yeni Akıllı Telefon Modelleri Piyasaya Sürüldü</h3>
+                            <p>Önde gelen teknoloji firmaları, gelişmiş kamera ve pil ömrü ile donatılmış yeni modellerini tanıttı.</p>
+                            <time datetime="2026-01-08">8 Ocak 2026</time>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="widget">
+                <h4>Trend</h4>
+                <ul>
+                    <li><a href="#">#YapayZeka</a></li>
+                    <li><a href="#">#Ekonomi</a></li>
+                    <li><a href="#">#İklim</a></li>
+                </ul>
+            </div>
+            <div class="widget">
+                <h4>Abone Ol</h4>
+                <p>Günlük bültene kaydolun.</p>
+                <input type="email" placeholder="E-posta adresiniz">
+                <button class="subscribe-small">Abone Ol</button>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 News UI. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="subscription-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Bültene Abone Ol</h2>
+            <p>En güncel haberleri almak için bültene abone olun!</p>
+            <input type="email" placeholder="E-posta adresiniz" id="email-input">
+            <button id="subscribe-btn">Abone Ol</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
