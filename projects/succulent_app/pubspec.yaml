@@ -22,6 +22,10 @@ flutter:
   assets:
     - assets/app-icon.svg
     - assets/splash-icon.svg
+  fonts:
+    - family: Brawler
+      fonts:
+        - asset: assets/fonts/Brawler-Regular.ttf
 
 flutter_launcher_icons:
   android: true

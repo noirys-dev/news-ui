@@ -11,12 +11,28 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+  void initState() {
+    super.initState();
+    Future.delayed(const Duration(seconds: 2), () {
+      if (!mounted) {
+        return;
+      }
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => const HomeScreen(),
+        ),
+      );
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     const brown = Color(0xFFA76D5A); // #a76d5a
     const lightBrown = Color(0xFFE4B69D); // #e4b69d
     const darkGreen = Color(0xFF76966B); // #76966b
     const lightGreen = Color(0xFFC3CE98); // #c3ce98
     const cream = Color(0xFFF9EEDB); // #f9eedb
+    const darkGray = Color(0xFF636262);
 
     return Scaffold(
       backgroundColor: cream,
@@ -37,67 +53,64 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Stack(
-                alignment: Alignment.center,
-                children: [
-                  SizedBox(
-                    width: 250,
-                    height: 250,
-                    child: SvgPicture.asset(
-                      'assets/splash-icon.svg',
-                      fit: BoxFit.contain,
+          child: DefaultTextStyle(
+            style: const TextStyle(
+              fontFamily: 'Brawler',
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    SizedBox(
+                      width: 250,
+                      height: 250,
+                      child: SvgPicture.asset(
+                        'assets/splash-icon.svg',
+                        fit: BoxFit.contain,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 24),
-              Text(
-                'Succulent',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.2,
-                  color: Colors.white,
+                  ],
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Grow your habits like succulents',
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.white.withOpacity(0.85),
-                ),
-              ),
-              const SizedBox(height: 32),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: darkGreen,
-                  foregroundColor: Colors.white,
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (_) => const HomeScreen(),
-                    ),
-                  );
-                },
-                child: const Text(
-                  'Go to Home',
+                const SizedBox(height: 24),
+                Text(
+                  'Succulent',
                   style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 28,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.2,
+                    color: Colors.white,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.2),
+                        offset: Offset(0, 3),
+                        blurRadius: 10,
+                      ),
+                    ],
                   ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 12),
+                Text(
+                  'Growth, without the grind',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: darkGray,
+                    shadows: [
+                      Shadow(
+                        color: Colors.black.withOpacity(0.15),
+                        offset: Offset(0, 3),
+                        blurRadius: 10,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 120),
+                CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(darkGreen),
+                ),
+              ],
+            ),
           ),
         ),
       ),

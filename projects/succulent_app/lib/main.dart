@@ -16,9 +16,9 @@ class SucculentApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
+        fontFamily: 'Brawler',
       ),
       home: const SplashScreen(),
     );
   }
 }
-
